@@ -1,0 +1,37 @@
+:root {
+  --secondary-color: #f3f4f640;
+  --primary-color: hsl(140, 29%, 80%);
+  --tertiary-color: #030712;
+}
+
+* {
+  font-family: "Inter", serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: var(--tertiary-color);
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--tertiary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
