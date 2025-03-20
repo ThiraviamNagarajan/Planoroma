@@ -16,13 +16,13 @@ function HomePage() {
   });
   const [allTodoTasks, setAllTodoTasks] = useState<any>([]);
   const [isTodo, setIsTodo] = useState<any>(false);
-  const [category, setCategory] = useState<any>([
+  const category:any = [
     { value: "default", checked: false },
     { value: "Personal", checked: false },
     { value: "Official", checked: false },
     { value: "Travel", checked: false },
     { value: "PhysicalHealth", checked: false },
-  ]);
+  ];
   const [editIndex, SetEditIndex] = useState<any>("");
   const [isEdit, setIsEdit] = useState<any>(false);
   const [isAdd, setIsAdd] = useState<any>(false);

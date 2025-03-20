@@ -88,10 +88,10 @@ function TaskCard({
   function handleDelete() {
     // const location = useLocation();
     // const userEmail = location.state?.email || "Guest";
-    let filterData = details.filter((val: any, index: any) => {
-      
+    let filterData = details.filter((_:any, index: any) => {
       return delIndex !== index;
     });
+    
     setAllTodoTasks(filterData);
     localStorage.setItem(userEmail, JSON.stringify(filterData));
     setDeleteBtn(false);

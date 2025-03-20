@@ -1,4 +1,3 @@
-import { useState } from 'react'
 
 import './App.css'
 import HomePage from './components/HomePage'
@@ -10,7 +9,6 @@ import { NavigationProvider, useNavigationControl } from './NavigationProvide'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   
 const ProtectedRoute = ({ element }:any) => {
