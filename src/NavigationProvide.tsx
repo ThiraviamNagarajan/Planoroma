@@ -12,7 +12,11 @@ export const NavigationProvider = ({ children }: { children: ReactNode }) => {
   const [allowed, setAllowed] = useState<boolean>(
     () => JSON.parse(localStorage.getItem("allowed") || "false")
   );
-
+  useEffect(() => {
+    const savedAllowed = JSON.parse(localStorage.getItem("allowed") || "false");
+    setAllowed(savedAllowed);
+  }, []);
+  
   useEffect(() => {
     localStorage.setItem("allowed", JSON.stringify(allowed));
   }, [allowed]);

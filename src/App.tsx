@@ -3,7 +3,7 @@ import './App.css'
 import HomePage from './components/HomePage'
 import LoginInPage from './components/LoginPage'
 import SignInPage from './components/SignInPage'
-import { BrowserRouter, Route, Routes,Navigate } from 'react-router'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { NavigationProvider, useNavigationControl } from './NavigationProvide'
 
 
