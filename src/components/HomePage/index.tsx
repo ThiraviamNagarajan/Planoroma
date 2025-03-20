@@ -1,108 +1,7 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import MovieDetails from "../MovieDetails";
-
-// const HomePage = () => {
-
-//   const [movies, setMovies] = useState([]);
-
-//   useEffect(() => {
-//     fetchMovies();
-//   }, []);
-
-//   async function fetchMovies() {
-//     const options = {
-//       method: 'GET',
-//       url: 'https://movies-ratings2.p.rapidapi.com/ratings',
-//       params: {id: 'tt0111161'},
-//       headers: {
-//         'x-rapidapi-key': 'db7f657f61msh1e0db72afecad16p14684djsn094675381a56',
-//         'x-rapidapi-host': 'movies-ratings2.p.rapidapi.com'
-//       }
-//     };
-
-//     try {
-//       const response = await axios.request(options);
-//       console.log(response.data);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
-
-//   return (
-//     <>
-//       <div
-//         style={{
-//           position: "sticky",
-//           top: 0,
-//           left: 0,
-//           backgroundColor: "gray",
-//           display: "flex",
-//           justifyContent: "space-between",
-//           alignItems: "center",
-//           padding: "20px 50px",
-//           color: "white",
-//           borderBottomLeftRadius:"8px",
-//           borderBottomRightRadius:"8px",
-//         }}
-//         className="navbar"
-//       >
-//         <div><PiFilmSlateFill size={40} /></div>
-//         <div>"Welcome to MovieBuff"</div>
-//         <div>
-//           <input
-//             type="text"
-//             name="name"
-//             placeholder="Search for movies"
-//             value=""
-//             style={{
-//               padding: "5px",
-//               borderRadius: "3px",
-//               border: "1px solid #ccc",
-//               fontSize: "12px",
-//               backgroundColor: "white",
-//               outline: "none",
-//             }}
-//           />
-//         </div>
-//       </div>
-//       <div
-//         style={{
-//           display: "flex",
-//           justifyContent: "center",
-//           height: "100%",
-//           width: "100%",
-//           color: "var(--primary-color)",
-//           backgroundColor: "var(--tertiary-color)",
-//         }}
-//       >
-//         <div style={{ width: "80%" }}>
-//           <div
-//             style={{
-//               display: "flex",
-//               justifyContent: "space-between",
-//               color: "var(--secondary-color)",
-//               marginTop: "20px",
-//               flexWrap: "wrap",
-//               gap: "25px",
-//             }}
-//           >
-//             {movies.map((movie: any) => (
-//               <MovieDetails key={movie.id} movie={movie} />
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default HomePage;
 import "./index.css";
 import TaskCard from "../TaskCard";
-import { Navigate, useLocation, useNavigate } from "react-router";
-import { useNavigationControl } from "../../NavigationProvide";
-// import TaskCard from "./TaskCard";
+import { useLocation, useNavigate } from "react-router";
 
 function HomePage() {
   const location = useLocation();
@@ -132,7 +31,6 @@ function HomePage() {
   const [localSave, setLocalSave] = useState<any>([]);
   const navigate = useNavigate();
 
-  const { enableNavigation } = useNavigationControl();
 
   async function handleEvent(e: any) {
     if (e.target.name === "tasktitle") {
@@ -152,18 +50,7 @@ function HomePage() {
       });
     }
   }
-  // useEffect(() => {
-  //   const storedTodoList = localStorage.getItem("todolist");
-  //   const localTodoList = storedTodoList ? JSON.parse(storedTodoList) : [];
-
-  //   if (localSave.length > 0) {
-  //     const updatedTodoList = [...localTodoList, ...localSave];
-  //     localStorage.setItem("todolist", JSON.stringify(updatedTodoList));
-  //     setAllTodoTasks(updatedTodoList);
-  //   } else {
-  //     setAllTodoTasks(localTodoList);
-  //   }
-  // }, [localSave]);
+ 
 
   useEffect(() => {
     const userEmail = location.state?.email || "Guest";

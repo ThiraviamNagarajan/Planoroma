@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import  { useEffect, useState } from "react";
 
 function TaskCard({
   details,
@@ -49,7 +48,6 @@ function TaskCard({
 
   const screenWidth:any = window.screen.width
 
-  const screenHeight : any = window.screen.height
 
   useEffect(() => {
     setTabDetails(details);
@@ -91,6 +89,7 @@ function TaskCard({
     // const location = useLocation();
     // const userEmail = location.state?.email || "Guest";
     let filterData = details.filter((val: any, index: any) => {
+      
       return delIndex !== index;
     });
     setAllTodoTasks(filterData);
